@@ -6,17 +6,15 @@ const userRouter =require('./routes/userRouter')
 
 
 app.use(express.urlencoded({extended:false}))
-//require('./db/db')
+require('./db/db')
 
-//buradan da direk mongo atlasa baglaniriz
+/*buradan da direk mongo atlasa baglaniriz
 mongoose.connect('mongodb+srv://youtube:Azxs12345@cluster0.wpuxx.mongodb.net/digi?retryWrites=true&w=majority',
 {useNewUrlParser :true , useUnifiedTopology: true})
-.then(()=>app.listen(PORT ,()=>console.log(`listenig port ${PORT}`)))
+.then(()=>app.listen(PORT ,()=>console.log(`listenig port ${PORT}`)))*/
 
-app.get('/',(req,res)=>{
-    res.send('deneme')
-})
 
+// app.get('/',(req,res)=>{res.send('index')}) kontrol amacli ama local bakarken yeniden baslatta sonra local hostta git
 
 
 
