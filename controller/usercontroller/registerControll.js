@@ -11,7 +11,7 @@ const registerControll =  async (req,res) => {
         const {name,surname,password,email }= req.body
         console.log(name,surname,password,email)
 
-        if(!email || !password || !name ,!surname) return res.send('doldurun')
+        if(!email || !password || !name || !surname) return res.send('doldurun')
         const emailCont = await Users.findOne({email :email})
         if(emailCont) return res.send('kullanici var')
         // yeni kullaniciyi 
