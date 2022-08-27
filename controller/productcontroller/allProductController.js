@@ -57,7 +57,6 @@ res.status(200).json({
     data:products
 })
 
-
         
     } catch (error) {
          console.log(error.message)

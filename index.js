@@ -1,13 +1,14 @@
 const express = require('express')
 const mongoose =require('mongoose')
 const app = express()
-const PORT = 8000
+const PORT = 8005
 
 const dotenv= require('dotenv')
 dotenv.config({path:'.env'})
-
+app.use(express.json())
 
 const productRouter =require('./routes/productRouter')
+const userRouter =require('./routes/userRouter')
 
 app.use(express.urlencoded({extended:false}))
 require('./db/db')
@@ -23,8 +24,10 @@ mongoose.connect('mongodb+srv://youtube:Azxs12345@cluster0.wpuxx.mongodb.net/dig
 
 
 app.use('/products',productRouter)
+//product bitince user zpamaza 
+app.use('/user',userRouter)
  
-app.listen(8000,()=>{
+app.listen(8005,()=>{
     console.log('geldik')
 })
 

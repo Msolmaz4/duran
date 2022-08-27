@@ -5,6 +5,7 @@ const Products = require('./models/productModel')
 
 
 
+
 const main =()=>{
     mongoose.connect('mongodb://127.0.0.1:27017/ePatika')
     .then(()=>console.log('mongo baglandi'))
@@ -44,3 +45,4 @@ Products.insertMany([
   ])
 .then(()=>console.log('prod okez'))
 .catch((err)=>console.log(err))
+
